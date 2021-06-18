@@ -20,12 +20,58 @@ const Login = () => {
   });
   //replace with error state
 
+  const handleChange = e => {
+    setState({
+      credentials: {
+        ...state.credentials,
+        [e.target.name]: e.target.value
+      }
+    })
+  };
+
+  const login = e => {
+    e.preventDefault();
+    if (state.credentials.username === ''|| state.credentials.password === '') {
+      setError({
+        error: 'Username or Password is not valid.'
+      })
+      console.log(errer.error);
+    }
+  }
+
+  useEffect(
+    axios.post('http://localhost:5000/api/login', state.credentials)
+    .then(res => {
+      localStorage.setItem('token', res.data.payload);
+      history.push('/bubblepage')
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+  );
+
   return (
     <div>
       <h1>Welcome to the Bubble App!</h1>
       <div data-testid="loginForm" className="login-form">
         <h2>Build login form here</h2>
       </div>
+      <form onSubmit={login}>
+        <input type='text'
+          name='username'
+          placeholder='Username'
+          value={state.credentials.username}
+          onChange={handleChange}
+          data-testid='username'/>
+
+          <input type='text'
+            name='password'
+            placeholder='Password'
+            value={state.credentials.password}
+            onChange={handleChange}
+            data-testid='password' />
+            <button>Login</button>
+      </form>
 
       <p data-testid="errorMessage" className="error">{error}</p>
     </div>
