@@ -10,7 +10,7 @@ const testColor = {
 
 }
 test("Renders without errors", ()=> {
-    render(<BubblePage />)
+    render(<BubblePage color='null'/>)
 });
 
 test("Renders appropriate number of colors passed in through mock", async ()=> {
