@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
@@ -27,6 +27,14 @@ const BubblePage = () => {
   };
 
   const deleteColor = (colorToDelete) => {
+    const colorDelete = {
+      method: 'DELETE',
+      headers: {
+        'Authorization': 'token',
+      }
+    }
+    fetch('http://localhost:5000/api/colors/123', colorToDelete)
+    .then(()=> setEditing('Delete Successful'));
   };
 
   return (
