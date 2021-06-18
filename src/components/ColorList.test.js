@@ -3,7 +3,6 @@ import { render, screen} from "@testing-library/react";
 import ColorList from './ColorList';
 
 test("Renders an empty list of colors without errors", () => {
-    render(<ColorList/>)
 });
 
 test("Renders a list of colors without errors", () => {
