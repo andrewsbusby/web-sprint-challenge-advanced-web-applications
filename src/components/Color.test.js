@@ -3,7 +3,10 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Color from './Color';
 
+const testColor = '#555';
+
 test("Renders without errors with blank color passed into component", () => {
+    render(<Color hex={testColor}/>);
 });
   
 test("Renders the color passed into component", () => {
