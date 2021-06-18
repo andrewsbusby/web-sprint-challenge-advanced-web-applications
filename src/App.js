@@ -6,7 +6,7 @@ import Login from "./components/Login";
 import "./styles.scss";
 
 function App() {
-const logout = localStorage.removeItem('token')
+const logout = () => {localStorage.removeItem('token')}
 
   return (
     <Router>
