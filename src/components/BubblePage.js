@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // import axios from 'axios'
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
-// import fetchColorService from '../services/fetchColorService';
+import fetchColorService from '../services/fetchColorService';
 
 
 const BubblePage = () => {
@@ -12,7 +12,7 @@ const BubblePage = () => {
   const [editing, setEditing] = useState(false);
 
  useEffect(() => {
-
+  fetchColorService();
   const toggleEdit = (value) => {
     setEditing(value);
   };
