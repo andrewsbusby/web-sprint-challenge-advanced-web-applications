@@ -15,9 +15,7 @@ const Login = () => {
     }
   });
 
-  const [error, setError] = useState({
-    error: '',
-  });
+  const [error, setError] = useState('');
   //replace with error state
 
   const handleChange = e => {
@@ -32,9 +30,7 @@ const Login = () => {
   const login = e => {
     e.preventDefault();
     if (state.credentials.username === ''|| state.credentials.password === '') {
-      setError({
-        error: 'Username or Password is not valid.'
-      })
+      setError('Username or Password is not valid.')
       console.log(error.error);
     }
   }

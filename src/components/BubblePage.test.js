@@ -3,12 +3,7 @@ import { render, screen} from "@testing-library/react";
 import BubblePage from './BubblePage';
 
 
-const testColor = {
-    orange: '#d45d0c',
-    blue: '#495f85',
-    red: '#af1f1f',
 
-}
 test("Renders without errors", ()=> {
     render(<BubblePage />)
 });
