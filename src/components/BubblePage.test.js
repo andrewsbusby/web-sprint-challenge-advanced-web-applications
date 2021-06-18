@@ -5,7 +5,7 @@ import BubblePage from './BubblePage';
 
 
 test("Renders without errors", ()=> {
-    render(<BubblePage />)
+   
 });
 
 test("Renders appropriate number of colors passed in through mock", async ()=> {
