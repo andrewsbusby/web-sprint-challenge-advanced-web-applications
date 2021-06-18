@@ -17,7 +17,7 @@ const Login = () => {
 
   const [error, setError] = useState('');
   //replace with error state
-console.log(error);
+
   const handleChange = e => {
     setState({
       credentials: {
