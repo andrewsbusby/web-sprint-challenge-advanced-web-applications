@@ -15,6 +15,15 @@ const BubblePage = () => {
   };
 
   const saveEdit = (editColor) => {
+    const editSave = {
+      method: 'PUT', 
+      headers: {
+        'Authorization': 'token',
+      }
+    }
+    fetch('http://localhost:5000/api/colors/:id', editColor)
+      .then(res => res.json())
+      .then(data => setColors(data.id));
   };
 
   const deleteColor = (colorToDelete) => {
