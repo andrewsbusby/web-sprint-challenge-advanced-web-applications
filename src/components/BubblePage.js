@@ -1,9 +1,9 @@
   
 import React, { useEffect, useState } from "react";
-import axios from 'axios'
+// import axios from 'axios'
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
-import fetchColorService from '../services/fetchColorService';
+// import fetchColorService from '../services/fetchColorService';
 
 
 const BubblePage = () => {
@@ -45,7 +45,7 @@ const BubblePage = () => {
       <ColorList colors={colors} editing={editing} toggleEdit={toggleEdit} saveEdit={saveEdit} deleteColor={deleteColor}/>
       <Bubbles colors={colors}/>
     </div>
-  );}, []);
+  );}, );
 };
 export default BubblePage;
 

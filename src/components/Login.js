@@ -10,8 +10,8 @@ const Login = () => {
 
   const [state, setState] = useState({
     credentials: {
-      username: '',
-      password: '',
+      username: 'Lambda',
+      password: 'School',
     }
   });
 
