@@ -12,7 +12,7 @@ const Login = () => {
     credentials: {
       username: '',
       password: '',
-    };
+    }
   });
 
   const [error, setError] = useState({
@@ -35,7 +35,7 @@ const Login = () => {
       setError({
         error: 'Username or Password is not valid.'
       })
-      console.log(errer.error);
+      console.log(error.error);
     }
   }
 
