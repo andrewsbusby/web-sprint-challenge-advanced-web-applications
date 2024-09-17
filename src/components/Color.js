@@ -9,7 +9,7 @@ const Color = (props) => {
         toggleEdit(false);
     }
 
-    const handleEdit = (e) => {
+    const handleEdit = () => {
         setEditColor(color);
         toggleEdit(true);
     }
